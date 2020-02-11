@@ -16,7 +16,7 @@ var forecast = (lat,long,callback)=>{
             var currently = body.currently
             var byday = body.daily.data
 
-            callback(undefined,byday[0].summary+' temperature is '+currently.temperature+' degree and probability of rain is '+currently.precipProbability+'%')
+            callback(undefined,byday[0].summary+' temperature is '+currently.temperature+' degree and probability of rain is '+currently.precipProbability+'%. The assumed max temperature is '+byday[0].temperatureHigh+' and min temperature is '+byday[0].temperatureLow+'.')
 
         }
     })
